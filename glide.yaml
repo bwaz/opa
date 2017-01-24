@@ -16,3 +16,5 @@ import:
 - package: github.com/dchest/siphash
 - package: gopkg.in/fsnotify.v1
 - package: github.com/ghodss/yaml
+- package: google.golang.org/grpc
+  version: 1.0.3

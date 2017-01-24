@@ -26,6 +26,9 @@ var defaultPolicyDir = "policies"
 // default listening address for the server
 var defaultAddr = ":8181"
 
+// default listening address for the grpc server
+var defaultGRPCAddr = ":5555"
+
 func init() {
 
 	params := runtime.NewParams()
@@ -99,6 +102,7 @@ to delete policies will remove the definition file.
 	runCommand.Flags().StringVarP(&params.HistoryPath, "history", "H", historyPath(), "set path of history file")
 	runCommand.Flags().StringVarP(&params.PolicyDir, "policy-dir", "p", "", "set directory to store policy definitions")
 	runCommand.Flags().StringVarP(&params.Addr, "addr", "a", defaultAddr, "set listening address of the server")
+	runCommand.Flags().StringVarP(&params.GRPCAddr, "grpc-addr", "g", defaultGRPCAddr, "set listening address of the grpc server")
 	runCommand.Flags().StringVarP(&params.OutputFormat, "format", "f", "pretty", "set shell output format, i.e, pretty, json")
 	runCommand.Flags().BoolVarP(&params.Watch, "watch", "w", false, "watch command line files for changes")
 

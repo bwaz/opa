@@ -31,6 +31,9 @@ type Params struct {
 	// Addr is the listening address that the OPA server will bind to.
 	Addr string
 
+	// Addr is the listening address that the OPA server will bind to.
+	GRPCAddr string
+
 	// Eval is a string to evaluate in the REPL.
 	Eval string
 
@@ -154,9 +157,16 @@ func (rt *Runtime) startServer(ctx context.Context, params *Params) {
 
 	s.Handler = NewLoggingHandler(s.Handler)
 
+	go func() {
+		if err := s.GRPCLoop(params.GRPCAddr); err != nil {
+			glog.Fatalf("Server exiting: %v", err)
+		}
+	}()
+
 	if err := s.Loop(); err != nil {
 		glog.Fatalf("Server exiting: %v", err)
 	}
+
 }
 
 func (rt *Runtime) startRepl(ctx context.Context, params *Params) {

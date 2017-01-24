@@ -1,5 +1,5 @@
-hash: 485b561f8e8ac38deb9b18b861c8d47c73c31a12fd5fb06e13b6fdedd3e8f7e9
-updated: 2017-01-18T12:24:17.727651155-08:00
+hash: 2b9efedb4da8fd1ad43dd5d347483e296338c9366d1438e0b0864fc95ee7bf3c
+updated: 2017-01-24T16:12:47.755736637-05:00
 imports:
 - name: github.com/dchest/siphash
   version: 4ebf1de738443ea7f45f02dc394c4df1942a126d
@@ -9,34 +9,61 @@ imports:
   version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
 - name: github.com/golang/lint
   version: 206c0f020eba0f7fbcfbc467a5eb808037df2ed6
+- name: github.com/golang/protobuf
+  version: 2bc9827a78f95c6665b5fe0abd1fd66b496ae2d8
+  subpackages:
+  - proto
 - name: github.com/gorilla/context
-  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+  version: 14f550f51af52180c2eefed15e5fd18d63c0a64a
 - name: github.com/gorilla/mux
-  version: 757bef944d0f21880861c2dd9c871ca543023cba
+  version: 0eeaf8392f5b04950925b8a69fe70f110fa7cbfc
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/mattn/go-runewidth
   version: 737072b4e32b7a5018b4a7125da8d12de90e8045
 - name: github.com/olekukonko/tablewriter
-  version: 44e365d423f4f06769182abfeeae2b91be9d529b
+  version: a0225b3f23b5ce0cbec6d7a66a968f8a59eca9c4
 - name: github.com/peterh/liner
   version: ac68be826b6476eb56a348fdbf8619439603e546
 - name: github.com/pkg/errors
   version: 248dadf4e9068a0b3e79f02ed0a610d935de5302
 - name: github.com/PuerkitoBio/pigeon
   version: 00949f7e8bae024d00576190ea052378944083d9
+- name: github.com/Sirupsen/logrus
+  version: d26492970760ca5d33129d2d799e34be5c4782eb
 - name: github.com/spf13/cobra
-  version: 9495bc009a56819bdb0ddbc1a373e29c140bc674
+  version: f62e98d28ab7ad31d707ba837a966378465c7b57
 - name: github.com/spf13/pflag
-  version: 5ccb023bc27df288a957c5e994cd44fd19619465
+  version: 1560c1005499d61b80f865c04d39ca7505bf7f0b
+- name: golang.org/x/net
+  version: 5d997795f7bb1d2de5edc1f5d64af2562401c82d
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
 - name: golang.org/x/sys
-  version: b699b7032584f0953262cb2788a0ca19bb494703
+  version: c200b10b5d5e122be351b67af224adc6128af5bf
   subpackages:
   - unix
 - name: golang.org/x/tools
-  version: add1aac04e65808e1f3ea9969c10e4494fd39d93
+  version: 721f218496963f33ebc9fbc5cdbdeed007ad9c49
   subpackages:
   - cmd/goimports
+- name: google.golang.org/grpc
+  version: b7f1379d3cbbbeb2ca3405852012e237aa05459e
+  subpackages:
+  - codes
+  - credentials
+  - grpclog
+  - internal
+  - metadata
+  - naming
+  - peer
+  - transport
 - name: gopkg.in/fsnotify.v1
   version: 629574ca2a5df945712d3079857300b5e4da0236
 - name: gopkg.in/yaml.v2
